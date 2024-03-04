@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="_data"
+            type="com.teamhelper.meeting.bean.ContactsBean" />
+
+        <import type="android.view.View" />
+
+        <import type="com.teamhelper.meeting.R" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="com.teamhelper.meeting.bean.ContactsBean" />
+    </data>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_select"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                app:imageResource="@{_data.checkStatus==ContactsBean.SELECTED?R.mipmap.ic_selected:_data.checkStatus==ContactsBean.UNSELECT?R.mipmap.ic_unselected:R.mipmap.ic_disable_select}" />
+
+
+            <com.teamhelper.meeting.view.widget.CircleImageView
+                loadHead="@{_data.avatarUrl}"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                app:civ_border_color="@color/color_ffffff"
+                app:civ_border_width="@dimen/dp_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{_data.nickname}"
+                android:textColor="@color/color_141414"
+                android:textSize="@dimen/dp_15"
+                tools:text="李四" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/color_e9e9e9" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

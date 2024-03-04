@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.teamhelper.phone'
+    compileSdk rootProject.ext.compile_sdk_version
+
+    defaultConfig {
+        applicationId "com.teamhelper.phone"
+        minSdk rootProject.ext.min_sdk_version
+        targetSdk rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:' + rootProject.ext.appcompat_version
+    implementation 'com.google.android.material:material:' + rootProject.ext.material_version
+    implementation 'androidx.constraintlayout:constraintlayout:' + rootProject.ext.constraintlayout_version
+    implementation 'androidx.lifecycle:lifecycle-extensions:' + rootProject.ext.lifecycle_version
+    //fastjson
+    implementation 'com.alibaba:fastjson:' + rootProject.ext.fastjson_version
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:' + rootProject.ext.glide_version
+    //会议sdk
+    implementation 'com.teamhelper.meeting:teamhelper-phone-meeting:1.0.0'
+    //时间选择器
+    implementation "com.kongzue.dialogx:DialogX:0.0.48"
+    implementation "com.kongzue.dialogx.style:DialogXMIUIStyle:0.0.48"
+}

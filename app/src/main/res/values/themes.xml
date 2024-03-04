@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TeamhelperSDK" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TeamhelperSDK" parent="Base.Theme.TeamhelperSDK" />
+
+    <style name="base_full_screen_Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 全透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置dialog的背景 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景是否模糊显示 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+</resources>
