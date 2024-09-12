@@ -40,8 +40,10 @@ dependencies {
     //图片加载
     implementation 'com.github.bumptech.glide:glide:' + rootProject.ext.glide_version
     //会议sdk
-    implementation 'com.teamhelper.meeting:teamhelper-phone-meeting:1.0.76'
+    implementation 'com.teamhelper.meeting:teamhelper-phone-meeting:1.0.148'
     //时间选择器
     implementation "com.kongzue.dialogx:DialogX:0.0.48"
     implementation "com.kongzue.dialogx.style:DialogXMIUIStyle:0.0.48"
+    implementation 'com.teamhelper:camera:0.0.1'
+    implementation "com.guolindev.permissionx:permissionx:1.8.0"
 }

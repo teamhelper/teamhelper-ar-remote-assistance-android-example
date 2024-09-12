@@ -13,6 +13,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
+        maven { url "https://maven.rokid.com/repository/maven-public/" }
         maven {
             url 'http://maven.teamhelper.cn:8081/repository/MST/'
             allowInsecureProtocol true
